@@ -1,21 +1,20 @@
-import React from "react";
+import React, { FC } from 'react';
 
-import { Switch, Route, RouteComponentProps } from "react-router-dom";
+import { Switch } from 'react-router-dom';
+import AdminLayout from './layouts/adminLayout/adminLayout';
 
-import routes from "./config/routes";
+import routes from './config/routes';
 
-const App: React.FunctionComponent<{}> = (props) => {
+const App: FC = props => {
   return (
     <Switch>
       {routes.map((route, index) => {
         return (
-          <Route
+          <AdminLayout
             key={index}
             path={route.path}
             exact={route.exact}
-            render={(props: RouteComponentProps<any>) => (
-              <route.component {...props} {...route.props} />
-            )}
+            component={route.component}
           />
         );
       })}

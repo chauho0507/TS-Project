@@ -1,0 +1,10 @@
+.main-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  position: relative;
+  display: flex;
+}
