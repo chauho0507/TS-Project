@@ -1,10 +1,8 @@
-import React from 'react';
-import { Route, RouteComponentProps } from 'react-router-dom';
+import React from "react";
+import { Route, RouteComponentProps } from "react-router-dom";
 
-import Header from '../Header/Header';
-import Sidebar from '../Sidebar/Sidebar';
-
-import * as S from './styles';
+import HeaderBST from "../HeaderBST/HeaderBST";
+import SidebarBST from "../SidebarBST/SidebarBST";
 
 const AdminLayout = (props: any) => {
   const { component: Component, ...rest } = props;
@@ -13,13 +11,19 @@ const AdminLayout = (props: any) => {
     <Route
       {...rest}
       render={(routeProps: RouteComponentProps<any>) => (
-        <S.LayoutContainer>
-          <Header />
-          <S.MainContainer>
-            <Sidebar />
-            <Component {...routeProps} />
-          </S.MainContainer>
-        </S.LayoutContainer>
+        <>
+          <HeaderBST />
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col">
+                <SidebarBST />
+              </div>
+              <div className="col">
+                <Component {...routeProps} />
+              </div>
+            </div>
+          </div>
+        </>
       )}
     />
   );

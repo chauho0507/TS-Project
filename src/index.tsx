@@ -4,7 +4,8 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
-import 'antd/dist/antd.css';
+import 'bootstrap/dist/css/bootstrap.css';
+// import 'antd/dist/antd.css';
 
 ReactDOM.render(
   <React.StrictMode>

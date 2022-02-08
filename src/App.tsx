@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import './App.css';
 
 import { Switch } from 'react-router-dom';
 import AdminLayout from './layouts/adminLayout/adminLayout';
